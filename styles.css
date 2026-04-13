@@ -1,0 +1,24 @@
+.image-container {
+  display: flex;
+  justify-content: center; /* центрирование по горизонтали */
+  align-items: center; /* центрирование по вертикали (опционально) */
+  width: 100%;
+}
+
+.image-container img {
+  max-width: 30%;
+  height: auto;
+}
+
+.responsive-icon {
+  width: 10vw;
+  max-width: 35px;
+  min-width: 20px;
+  height: auto;
+}
+
+.card{
+  display: inline-block;
+  width: 20rem; 
+  height: 25rem;
+}
