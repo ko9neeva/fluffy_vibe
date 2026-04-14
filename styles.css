@@ -1,3 +1,4 @@
+/*Лого магазина*/
 .image-container {
   display: flex;
   justify-content: center; /* центрирование по горизонтали */
@@ -10,6 +11,13 @@
   height: auto;
 }
 
+/*Надпись*/
+.alert-secondary {
+  text-align: center; 
+  font-size: clamp(1rem, 2vw, 3rem);
+}
+
+/*Лого соцсетей*/
 .responsive-icon {
   width: 10vw;
   max-width: 35px;
@@ -17,8 +25,42 @@
   height: auto;
 }
 
-.card{
-  display: inline-block;
-  width: 20rem; 
-  height: 25rem;
+/*Карточки товара*/
+.grid-container {
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  max-width: 90vw; 
+  /*padding: 0%;
+  margin: 0 auto; /* чтобы контейнер сам был по центру страницы */
+  margin: 3%; 
+  gap: 1%;
 }
+.card{
+  /*display: inline-block;
+  /*width: 20rem; 
+  height: 25rem;*/
+  width: 100%;  /* занять всю ширину своей ячейки */
+  height: auto;
+  padding: 20%;
+  /*border: 0;*/
+  /*margin: 0px; */
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+.card-title{
+    font-size: clamp(1rem, 2vw + 0.5rem, 1.5rem); /* min: 16px, preferred: 2vw, max: 24px */
+    /*2vw (Viewport Width): Означает 2% от ширины области просмотра (ширины окна браузера).
+    0.5rem (Root EM): Означает 0.5 от размера шрифта корневого элемента*/
+}
+.card-text {
+    font-size: clamp(1rem, 1vw + 0.5rem, 1.5rem);  
+    /*font-size: clamp(1rem, 2vw + 0.5rem, 1.5rem); /* min: 16px, preferred: 2vw, max: 24px */
+    /*2vw (Viewport Width): Означает 2% от ширины области просмотра (ширины окна браузера).
+    0.5rem (Root EM): Означает 0.5 от размера шрифта корневого элемента*/
+}
+
+
