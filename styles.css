@@ -4,11 +4,34 @@ body {
   justify-content: center;
   height: 100vh;
   align-items: center;
-  font-size: 18px;
+  font-size: 20px; /*Чтобы карточки были одного размера*/
+  font-family: "Tenor Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.flaticon-icons{
+  display: flex;
+  justify-content:flex-end;
+  width: 100vw;
+  padding: 0px 20px;
+}
+.social-logo{
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+.fi {
+  font-size: 30px;
+  margin: 5px;
+  color: #3b8075;
+}
+a {
+  text-decoration: none;
 }
 
 .logo-main { /*Лого магазина*/
-  text-align: center;
+  text-align: center;  
 }
 .logo-main img{
   width: 35%;
@@ -31,10 +54,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out; /*На мобилке неудобно - не уменьшаются после нажатия*/
 }
 .card:hover {
-  transform: scale(1.05);
+  transform: scale(1.05); /*На мобилке неудобно - не уменьшаются после нажатия*/
 }
 .card-title{
   margin: 5px;
@@ -45,7 +68,7 @@ body {
 }
 
 .button {
-  background-color: #4CAF50;
+  background-color: #51a195;
   color: white;
   padding: 5px 20px;
   text-align: center;
@@ -57,7 +80,7 @@ body {
 }
 
 .button:hover {
-  background-color: #37873b;
+  background-color: #3b8075;
 }
 
 .carousel { /*Карусель с фото*/
@@ -69,17 +92,4 @@ body {
 
 .carousel img{
   border-radius: 10px;
-}
-
-.container{ /*Лого соцсетей*/
-  padding: 0px 20px 10px 20px;
-  text-align: center;
-
-}
-
-.responsive-icon {
-  width: 35px;
-  max-width: 35px;
-  min-width: 20px;
-  margin: 0px 5px 0px 5px;
 }
