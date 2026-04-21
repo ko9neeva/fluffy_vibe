@@ -1,73 +1,85 @@
-/*Лого магазина*/
-.image-container {
-  display: flex;
-  justify-content: center; /* центрирование по горизонтали */
-  align-items: center; /* центрирование по вертикали (опционально) */
-  width: 100%;
-}
-
-.image-container img {
-  max-width: 30%;
-  min-width: 200px;
-  height: auto;
-}
-
-/*Надпись*/
-.alert-secondary {
-  text-align: center; 
-  font-size: clamp(1rem, 2vw, 3rem);
-  margin: 1%;
-}
-
-/*Лого соцсетей*/
-.responsive-icon {
-  width: 10vw;
-  max-width: 35px;
-  min-width: 20px;
-  height: auto;
-}
-
-/*Карточки товара*/
-.flex-container {
+body {
   display:flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  margin: 1%;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  font-size: 18px;
 }
-.card{  
-  width: clamp(200px, 30%, 500px);
+
+.logo-main { /*Лого магазина*/
+  text-align: center;
+}
+.logo-main img{
+  width: 35%;
+  min-width: 300px;
+}
+
+.alert-secondary { /*Надпись*/
+  width: 100vw;
+  text-align: center;
+  margin: 10px 0px;
+}
+
+.card{ /*Карточка товара*/
+  width: 300px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 5px 5px #0000001a;
+  padding: 5px;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   transition: transform 0.3s ease-in-out;
-  margin: 1%;
-  cursor: pointer;
 }
 .card:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 .card-title{
-    /*font-size: 2vw;*/
-    font-size: clamp(0.5rem, 2vw, 1.5rem); 
-    /*font-size: clamp(1rem, 2vw + 0.5rem, 1.5rem); /* min: 16px, preferred: 2vw, max: 24px */
-    /*2vw (Viewport Width): Означает 2% от ширины области просмотра (ширины окна браузера).
-    0.5rem (Root EM): Означает 0.5 от размера шрифта корневого элемента*/
+  margin: 5px;
+  text-align: center;
 }
 .card-text {
-    font-size: clamp(0.5rem, 2vw, 1.5rem);  
+  margin: 5px; 
 }
 
-/*Карусель с фото*/
-.carousel-container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1%;
-  margin: 1%;
+.button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 5px 20px;
+  text-align: center;
+  margin: 5px 20px;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background-color 0.2s linear;
+  cursor: pointer;
 }
-.carousel-container .carousel {
-  width: 25%;
+
+.button:hover {
+  background-color: #37873b;
 }
 
+.carousel { /*Карусель с фото*/
+  width: 300px;
+  margin: 5px;
+  box-shadow: 0 5px 5px #0000001a;
+  border-radius: 10px;
+}
 
+.carousel img{
+  border-radius: 10px;
+}
 
+.container{ /*Лого соцсетей*/
+  padding: 0px 20px 10px 20px;
+  text-align: center;
 
+}
 
-
+.responsive-icon {
+  width: 35px;
+  max-width: 35px;
+  min-width: 20px;
+  margin: 0px 5px 0px 5px;
+}
