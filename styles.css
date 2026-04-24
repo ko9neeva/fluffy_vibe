@@ -2,62 +2,79 @@ body {
   display:flex;
   flex-wrap: wrap;
   justify-content: center;
-  height: 100vh;
   align-items: center;
-  font-size: 20px; /*Чтобы карточки были одного размера*/
+  width: 100vw; /**/
+  height: 100vh;
+  padding: 0px;
+  margin: 0px;
   font-family: "Tenor Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
+  color: rgba(0, 0, 0, 0.700);
+
+/*font-size: 20px; /*Чтобы карточки были одного размера*/
+  font-size: clamp(16px, 1.7vw, 20px);
 }
 
-.flaticon-icons{
-  display: flex;
-  justify-content:flex-end;
+.video-container{
   width: 100vw;
-  padding: 0px 20px;
+  height: 100vh;
+  overflow: hidden; /*свойство, которое обрезает содержимое элемента, выходящее за границы его блока, и делает его невидимым*/
+  position: relative; /* Создает систему координат для текста */
 }
-.social-logo{
-  display: flex;
-  justify-content: center;
-  width: 100vw;
-}
-.fi {
-  font-size: 30px;
+
+video {
+  width:100%;
+  height: 100%;
+  object-fit: cover; /* Обрезает видео, сохраняя пропорции */
+ }
+
+.overlay-logo {
+  width: 200px;       /* Размер логотипа */
   margin: 5px;
-  color: #3b8075;
-}
-a {
-  text-decoration: none;
 }
 
-.logo-main { /*Лого магазина*/
-  text-align: center;  
-}
-.logo-main img{
-  width: 35%;
-  min-width: 300px;
-}
-
-.alert-secondary { /*Надпись*/
-  width: 100vw;
+.overlay-text {
+  position: absolute; /* Позволяет двигать текст поверх видео */
+  top: 20%;           /* Центрируем по вертикали */
+  left: 50%;          /* Центрируем по горизонтали */
+  transform: translate(-50%, -50%); /* Точное выравнивание по центру */
+  color: white;       /* Белый текст лучше видно */
   text-align: center;
-  margin: 10px 0px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Тень, чтобы текст не терялся */
+  z-index: 1;         /* Чтобы текст точно был над видео */
 }
 
-.card{ /*Карточка товара*/
-  width: 300px;
-  background-color: #f4f4f4;
+.card{
+  width:100vw;
+  /*background-color: #f4f4f4;*/
+  /*background-color:#a5bebb00;*/
   border-radius: 10px;
-  box-shadow: 0 5px 5px #0000001a;
-  padding: 5px;
-  margin: 5px;
+  box-shadow: 5px 5px 5px 5px #0000001a;
+  padding: 10px;
+  margin: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: transform 0.3s ease-in-out; /*На мобилке неудобно - не уменьшаются после нажатия*/
 }
-.card:hover {
-  transform: scale(1.05); /*На мобилке неудобно - не уменьшаются после нажатия*/
+
+.only-foto{
+  width: 100vw;
+  height: 50vh;
+  overflow: hidden; /*свойство, которое обрезает содержимое элемента, выходящее за границы его блока, и делает его невидимым*/
+  display: flex;
+  justify-content: center;
+}
+.only-foto img{
+  height: 50vh;
+}
+
+.product{ /*Карточка товара*/
+  width: 300px;
+}
+.product img{
+  width: 300px;
+
 }
 .card-title{
   margin: 5px;
@@ -66,7 +83,6 @@ a {
 .card-text {
   margin: 5px; 
 }
-
 .button {
   background-color: #51a195;
   color: white;
@@ -83,13 +99,27 @@ a {
   background-color: #3b8075;
 }
 
-.carousel { /*Карусель с фото*/
-  width: 300px;
-  margin: 5px;
-  box-shadow: 0 5px 5px #0000001a;
-  border-radius: 10px;
+.separator{
+  display:flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  justify-content: center;
+  background-color: #cddddb;
+  /*border-color: #e5f1ef;
+  border-style: groove;*/
+  border-radius: 5px;
 }
 
-.carousel img{
-  border-radius: 10px;
+.fi {
+  display: flex;
+  font-size: 35px;
+  padding: 5px;
+  margin: 5px;
+  color: rgba(0, 0, 0, 0.700);
+}
+.fi:hover {
+  color: #3b8075;
+}
+a {
+  text-decoration: none;
 }
