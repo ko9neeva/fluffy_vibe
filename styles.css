@@ -58,15 +58,34 @@ video {
   align-items: center;
 }
 
-.only-foto{
+.only-photos{
   width: 100vw;
-  height: 50vh;
-  overflow: hidden; /*свойство, которое обрезает содержимое элемента, выходящее за границы его блока, и делает его невидимым*/
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-rows: 1fr; 
 }
-.only-foto img{
-  height: 50vh;
+.only-photos img{
+  width: 100%;
+}
+.two-photos{
+  grid-template-columns: repeat(2,1fr);
+}
+.three-photos{
+  grid-template-columns: 1fr 1.58fr 1fr; 
+}
+.four-photos{
+  grid-template-columns: repeat(4,1fr); 
+}
+.foto1{
+  grid-column:1;
+}
+.foto2{
+  grid-column:2;
+}
+.foto3{
+  grid-column:3;
+}
+.foto4{
+  grid-column:4;
 }
 
 .product{ /*Карточка товара*/
