@@ -1,144 +1,49 @@
-body {
-  display:flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  width: 100vw; /**/
-  height: 100vh;
-  padding: 0px;
-  margin: 0px;
-  font-family: "Tenor Sans", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: rgba(0, 0, 0, 0.700);
+.main-logo{
+    cursor: url('/pictures/paw.png') 16 16, auto;
+} 
 
-/*font-size: 20px; /*Чтобы карточки были одного размера*/
-  font-size: clamp(16px, 1.7vw, 20px);
+.container-fluid {
+    font-family: "Tenor Sans", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: rgba(0, 0, 0, 0.700);
+    background-color: rgb(185, 200, 200);
 }
 
-.video-container{
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden; /*свойство, которое обрезает содержимое элемента, выходящее за границы его блока, и делает его невидимым*/
-  position: relative; /* Создает систему координат для текста */
+.bi{
+    color: rgba(0, 0, 0, 0.600);
+}
+.bi:hover {
+    color: rgba(0, 0, 0, 0.700);
 }
 
-video {
-  width:100%;
-  height: 100%;
-  object-fit: cover; /* Обрезает видео, сохраняя пропорции */
- }
-
-.overlay-logo {
-  width: 200px;       /* Размер логотипа */
-  margin: 5px;
+.text-with-pictures {
+    background-color:  rgba(255, 255, 255, 0.500);
 }
 
-.overlay-text {
-  position: absolute; /* Позволяет двигать текст поверх видео */
-  top: 20%;           /* Центрируем по вертикали */
-  left: 50%;          /* Центрируем по горизонтали */
-  transform: translate(-50%, -50%); /* Точное выравнивание по центру */
-  color: white;       /* Белый текст лучше видно */
-  text-align: center;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Тень, чтобы текст не терялся */
-  z-index: 1;         /* Чтобы текст точно был над видео */
+.page-end {
+    background-color: rgba(66, 66, 60, 0);
+    border-top-width: 1px;           /* border-1 */
+    border-top-style: solid;
+    border-top-color: rgba(0, 0, 0, 0.400); 
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
 }
 
-.card{
-  width:100vw;
-  /*background-color: #f4f4f4;*/
-  /*background-color:#a5bebb00;*/
-  border-radius: 10px;
-  box-shadow: 5px 5px 5px 5px #0000001a;
-  padding: 10px;
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.product-cards{
+    /*наслаиваю белый*/
+    background-color: rgba(255, 255, 255, 0.500);
 }
 
-.only-photos{
-  width: 100vw;
-  display: grid;
-  grid-template-rows: 1fr; 
-}
-.only-photos img{
-  width: 100%;
-}
-.two-photos{
-  grid-template-columns: repeat(2,1fr);
-}
-.three-photos{
-  grid-template-columns: 1fr 1.58fr 1fr; 
-}
-.four-photos{
-  grid-template-columns: repeat(4,1fr); 
-}
-.foto1{
-  grid-column:1;
-}
-.foto2{
-  grid-column:2;
-}
-.foto3{
-  grid-column:3;
-}
-.foto4{
-  grid-column:4;
+.product-card{
+  /*наслаиваю белый*/
+    background-color: rgba(255, 255, 255, 0.500);
+    /* box-shadow:  4px 6px 12px rgba(0,0,0,0.15); */
 }
 
-.product{ /*Карточка товара*/
-  width: 300px;
-}
-.product img{
-  width: 300px;
-
-}
-.card-title{
-  margin: 5px;
-  text-align: center;
-}
-.card-text {
-  margin: 5px; 
-}
-.button {
-  background-color: #51a195;
-  color: white;
-  padding: 5px 20px;
-  text-align: center;
-  margin: 5px 20px;
-  text-decoration: none;
-  border-radius: 10px;
-  transition: background-color 0.2s linear;
-  cursor: pointer;
+.carousel-inner{
+    box-shadow:  4px 6px 12px rgba(0,0,0,0.15);
 }
 
-.button:hover {
-  background-color: #3b8075;
-}
 
-.separator{
-  display:flex;
-  flex-wrap: wrap;
-  width: 100vw;
-  justify-content: center;
-  background-color: #cddddb;
-  /*border-color: #e5f1ef;
-  border-style: groove;*/
-  border-radius: 5px;
-}
-
-.fi {
-  display: flex;
-  font-size: 35px;
-  padding: 5px;
-  margin: 5px;
-  color: rgba(0, 0, 0, 0.700);
-}
-.fi:hover {
-  color: #3b8075;
-}
-a {
-  text-decoration: none;
-}
