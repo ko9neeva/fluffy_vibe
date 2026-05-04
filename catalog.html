@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Каталог</title>
-    <link rel="stylesheet" href="styles.css">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,20 +11,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <!-- .container: Имеет фиксированную ширину, которая меняется скачками в зависимости от размера экрана (на очень больших мониторах он центрируется и оставляет пустые поля по бокам). Это делает текст более читабельным, так как он не растягивается на всю ширину сверхширокого монитора. -->
     <div class="container-fluid px-0">
         <!-- 1.Навигационная панель -->
-        <nav class="navbar navbar-expand-md border-bottom border-light border-1 px-3">
+        <nav class="navbar navbar-expand-md px-3">
             <!--занимаем 3 столбца, чтобы лого было в центре -->
             <div class="flex-grow-1 col-3"></div>
             <!-- mb-3: Устанавливает отступ снизу размером 3
             mb-md-0: Правило: «начиная с размера экрана md (768px и больше) и выше, обнули отступ снизу» -->
-            <div class="main-logo d-flex flex-column align-items-center mb-2 col-6">
-                <img src="pictures/fluffy_vibe_logo.png" width="100" alt="Логотип">
-                <span class="fs-6 mt-1 fw-light">FLUFFY VIBE</span>
+            <div class="logo-with-text d-flex flex-column align-items-center mb-2 col-6">
+                <img src="pictures/fluffy_vibe_logo.png" class="main-logo" alt="Логотип">
+                <span class="main-text mt-1 fw-light">FLUFFY VIBE</span>
             </div>  
             <!-- Меню справа -->
             <div class="flex-grow-1 d-flex justify-content-end col-3">
@@ -37,152 +38,124 @@
                     <ul class="dropdown-menu dropdown-menu-end">
                         <li><a class="dropdown-item" href="index.html">О нас</a></li>
                         <li><a class="dropdown-item" href="page-2.html">Как мы создаем</a></li>
-                        <li><a class="dropdown-item" href="#">Контакты</a></li>
+                        <li><a class="dropdown-item" href="#">Корзина</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
 
-        <!-- 2.START THE FEATURETTES -->
-        <div class="text-with-pictures row px-4 py-4 mx-0">
-            <!-- Первый столбец -->
-            <div class="col-md-4">
-                <div id="carousel1" class="carousel slide">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carousel1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carousel1" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carousel1" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    </div>
+        <!-- 2. Карточки товаров -->
+        <div class="product-cards px-4 py-5"> 
+            <div class="container"> 
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3"> 
+                    <div class="col"> 
+                        <div class="product-card card shadow-sm">   
+                            
+                            <div class="card-body"> 
+                                <h3 class="my-title lh-1"> Вашего любимца можно вышить на худи любого цвета</h3>
+                                <div class="d-flex justify-content- align-items-center"> 
+                                    <button class="color-btn btn btn-primary btn-lg" style="background-color:rgba(120, 194, 194, 0.500); border-color: white;"type="button">Снежная мята</button> 
+                                    <button class="btn btn-primary btn-lg" style="background-color:rgb(91, 143, 141,0.700); border-color: white;"type="button">Зелено-голубой</button> 
+                                </div> 
+                                <div class="d-flex justify-content-center align-items-center"> 
+                                    <button class="color-btn btn btn-primary btn-lg" style="background-color:rgba(88, 168, 221, 0.500); border-color: white;"type="button">Небесно голубой</button> 
+                                    <button class="color-btn btn btn-primary btn-lg" style="background-color:rgba(245, 245, 220, 0.700); border-color: white;" type="button">Экрю</button> 
+                                </div> 
+                                <div class="d-flex justify-content-center align-items-center"> 
+                                    <button class="color-btn btn btn-primary btn-lg" style="background-color:rgba(255, 218, 185, 0.700); border-color: white;" type="button">Персик</button> 
+                                    <button class="color-btn btn btn-primary btn-lg" style="background-color: rgb(109, 75, 75, 0.700); border-color: white;" type="button">Теплый беж</button> 
+                                </div> 
+                            </div> 
+                            <img src="photos/carusel_4-1.jpg"  alt="Цветовая палитра для худи">
+                        </div> 
+                    </div> 
 
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="photos/carusel_4-1.jpg" class="d-block w-100" alt="Варианты цветов для толстовок">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="photos/carusel_4-3.jpg" class="d-block w-100" alt="Цвета толстовок: снежная мята, зелено-голубой, небесно-голубой">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="photos/carusel_4-2.jpg" class="d-block w-100" alt="Цвета толстовок: экрю, персик, теплый беж">
-                        </div>
-                    </div>
+                    <div class="col"> 
+                        <div class="product-card card shadow-sm">   
+                            <div class="card-body"> 
+                                <h3 class="my-title lh-1">Если у вас много четвероногих друзей, можно разместить их вместе</h3>
 
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-            </div>
-            
-            <!-- Второй столбец -->
-            <div class="col-md-4">
-                <p class="lead">
-                    Вашего любимца можно вышить на худи любого цвета. Так же можно выбрать цвет вышивки и ее размер.
-                </p>
-                <p class="lead">
-                    Если у вас много четвероногих друзей, можно разместить их вместе.
-                </p>
-            </div>
+                                <p class="my-text lead">Доплата за каждого хвостика</p> 
+                                <div class="text-end"> 
+                                    <!-- <button type="button" class="btn btn-lg btn-outline-secondary"></button>  -->
+                                    <h3 class="my-title lh-1"> +1000 р.</h3> 
+                                </div> 
+                            </div> 
+                            <img src="photos/carusel_5-1.jpg"  alt="Пример вышивки с четырьмя питомцами">
+                        </div> 
+                    </div> 
 
-            <!-- Третий столбец -->
-            <div class="col-md-4">
-                <div id="carousel2" class="carousel slide">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carousel2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carousel2" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    </div>
+                    <div class="col"> 
+                        <div class="product-card card shadow-sm"> 
+                            <img src="pictures/size_human.jpg" alt="Pазмер human">
+                            <div class="card-body"> 
+                                <h3 class="my-title lh-1"> Единый размер </h3>
+                                <p class="my-text lead"> Худи unisex, крой oversize, подходит для любого типа фигуры </p> 
+                                <div class="d-flex justify-content-between align-items-center"> 
+                                    <button type="button" class="btn btn-lg btn-outline-secondary">Выбрать</button> 
+                                    <h3 class="my-title lh-1">10000 р.</h3> 
+                                </div>
+                            </div> 
+                        </div> 
+                    </div> 
 
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="photos/carusel_5-1.jpg" class="d-block w-100" alt="Вышивка с четырьмя питомцами">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="photos/carusel_5-2.jpg" class="d-block w-100" alt="Вышивка с тремя питомцами">
-                        </div>
-                    </div>
+                    <div class="col"> 
+                        <div class="product-card card shadow-sm">   
+                            <img src="pictures/size-1.jpg"  alt="Размер xs-s">
+                            <div class="card-body"> 
+                                <h3 class="my-title lh-1"> Размер XS-S </h3>
+                                <p class="my-text lead"> Подойдет для самых маленьких питомцев. Например, для котиков, небольших собачек или если у вас котенок или щенок </p> 
+                                <div class="d-flex justify-content-between align-items-center"> 
+                                    <button type="button" class="btn btn-lg btn-outline-secondary">Выбрать</button> 
+                                    <h3 class="my-title lh-1">4300 р.</h3> 
+                                </div> 
+                            </div> 
+                        </div> 
+                    </div> 
 
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <hr class="featurette-divider px-0 py-0 mx-0 my-0">
+                    <div class="col"> 
+                        <div class="product-card card shadow-sm"> 
+                            <img src="pictures/size-2.jpg" alt="Размер m">
+                            <div class="card-body">
+                                <h3 class="my-title lh-1"> Размер M </h3> 
+                                <p class="my-text lead"> Подойдет для питомцев среднего размера. Например, для лис, енотов, собак средних пород, таких как французский бульдог, спаниель</p>
+                                <div class="d-flex justify-content-between align-items-center"> 
+                                    <button type="button" class="btn btn-lg btn-outline-secondary">Выбрать</button>
+                                    <h3 class="my-title lh-1">4500 р.</h3>  
+                                </div> 
+                            </div> 
+                        </div> 
+                    </div> 
 
-        <!-- 3. Three columns of text below the carousel -->
-        <div class="product-cards row px-4 py-4 mx-0">
+                    <div class="col"> 
+                        <div class="product-card card shadow-sm"> 
+                            <img src="pictures/size-3.jpg" alt="Размер l-xl">
+                            <div class="card-body"> 
+                                <h3 class="my-title lh-1"> Размер L-XL </h3>
+                                <p class="my-text lead">Подойдет для больших и даже очень больших питомцев. Например, для собак крупных пород, таких как немецкая овчарка, лабрадор, дог</p> 
+                                <div class="d-flex justify-content-between align-items-center"> 
+                                    <button type="button" class="btn btn-lg btn-outline-secondary">Выбрать</button> 
+                                    <h3 class="my-title lh-1">4700 р.</h3> 
+                                </div> 
+                            </div> 
+                        </div> 
+                    </div> 
 
-            <h2 class="featurette-heading fw-normal lh-1 mt-0 mb-3 mx-3 text-center">
-                Стоимость худи и свитшотов для хвостиков зависит от размеров питомца
-            </h2>
-            <hr class="featurette-divider px-0 py-0 mx-0 my-0">
-
-            <div class="product-card col-lg-4">
-                <img src="pictures/size_xs-s.jpg" alt="Размер xs-s" class="bd-placeholder-img text-center" height="200" >
-                <h2 class=" fw-normal ">4300 р. </h2>
-                <p>
-                    Подойдет для самых маленьких питомцев. Например, для котиков, небольших собачек или если у вас котенок или щенок
-                </p>
-                <p>
-                    <a class="btn btn-secondary" href="#">Выбрать</a>
-                </p>
-            </div>
-
-            <div class="product-card col-lg-4">
-                <img src="pictures/size_m.jpg" alt="Размер m" class="bd-placeholder-img " height="200">
-                <h2 class="fw-normal">4500 р.</h2>
-                <p >
-                    Подойдет для питомцев среднего размера. Например, для лис, енотов, собак средних пород, таких как французский бульдог, спаниель
-                </p>
-                <p>
-                    <a class="btn btn-secondary" href="#">Выбрать</a>
-                </p>
-            </div>
-
-            <div class="product-card col-lg-4">
-                <img src="pictures/size_l-xl.jpg" alt="Размер l-xl" class="bd-placeholder-img " height="200">
-                <h2 class="fw-normal">4700 р.</h2>
-                <p>
-                    Подойдет для больших и даже очень больших питомцев. Например, для собак крупных пород, таких как немецкая овчарка, лабрадор, дог
-                </p>
-                <p>
-                    <a class="btn btn-secondary" href="#">Выбрать</a>
-                </p>
-            </div>
-
-            <div class="product-card col-lg-4">
-                <img src="pictures/size_human.jpg" alt="Pазмер human" class="bd-placeholder-img" height="200">
-                <h2 class="fw-normal">10000 р.</h2>
-                <p>
-                    Худи unisex, крой oversize, единый размер, который подходит для любого типа фигуры (доплата за каждого хвостика +1000 р.)
-                </p>
-                <p>
-                    <a class="btn btn-secondary" href="#">Выбрать</a>
-                </p>
+                </div>              
             </div> 
-            <hr class="featurette-divider px-0 py-0 mx-0 my-0">
-
-        </div>
+        </div> 
 
         <!-- 3.Панель с соцсетями -->
-        <footer class="page-end py-1 my-0"> 
-            <ul class="nav col-12 justify-content-center"> 
+        <footer class="page-end py-1 my-0">                
+            <ul class="nav justify-content-center"> 
                 <li class="ms-3">
                     <a class="text-body-secondary" href="https://www.instagram.com/fluffy.vibe/" target="_blank" aria-label="Instagram">
-                        <i class="bi bi-instagram" style="font-size: 30px;"></i> 
+                        <i class="bi bi-instagram"></i> 
                     </a>
                 </li> 
                 <li class="ms-3">
                     <a class="text-body-secondary" href="https://t.me/fluffy_vibe_store" target="_blank" aria-label="Telegram">
-                        <i class="bi bi-telegram" style="font-size: 30px;"></i>
+                        <i class="bi bi-telegram"></i>
                     </a>
                 </li> 
             </ul> 
@@ -190,6 +163,7 @@
                 <span class="mb-3 mb-md-0 text-body-secondary">© 2026</span> 
             </div>  -->
         </footer> 
+
     </div> 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
