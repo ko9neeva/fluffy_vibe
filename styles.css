@@ -47,6 +47,10 @@
     color: rgba(0, 0, 0, 0.700);
     background-color: rgb(185, 200, 200); 
 }
+/*Main page*/
+.video-inst{
+    max-height: 80vh;;
+}
 
 /*Page 2*/
 .text-with-pictures {
