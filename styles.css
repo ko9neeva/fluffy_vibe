@@ -1,71 +1,112 @@
-/*Лапка*/
-.logo-with-text{
-    cursor: url('/pictures/paw.png') 16 16, auto;
-} 
-/*Menu*/
-.dropdown-menu{
-    background-color: rgba(255, 255, 255, 0.800);
-} 
-
-.navbar{
-    border: solid rgba(0, 0, 0, 0.200);
-    border-width: 1px;
-    box-shadow: inset 0 .5em 1.5em #0000001a, inset 0 .125em .5em #00000026;
-}
-
-/*Панель с соцсетями*/
-.page-end {
-    border: solid rgba(0, 0, 0, 0.200);
-    border-width: 1px;
-    box-shadow: inset 0 .5em 1.5em #0000001a, inset 0 .125em .5em #00000026;
-}
-
-.bi{
-    color: rgba(0, 0, 0, 0.600);
-    font-size: 30px;
-}
-.bi:hover {
-    color: rgba(0, 0, 0, 0.700);
-}
-/*Главный контейнер*/
-.container-fluid {
+/*шрифт, цвет*/
+* { 
     font-family: "Tenor Sans", sans-serif;
     font-weight: 600;
     font-style: normal;
     color: rgba(0, 0, 0, 0.700);
-    background-color: rgb(185, 200, 200); 
 }
-/*Main page*/
+/*тень*/
+.video-inst, .carousel-inner, .container1, .product-card{ 
+    box-shadow:  4px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.header, .footer {
+    background-color: rgb(185, 200, 200); /*если фото не прогрузится*/
+    position: relative; /*overflow: hidden; /*на родителе — не дает вылезти за границы*/
+    background-image: url('pictures/priroda.jpg');
+    background-size: cover;
+    background-position: center;
+}
+/*--------HEADER--------*/
+.navbar{
+    border: solid rgba(0, 0, 0, 0.200);
+    border-width: 10px;
+    box-shadow: inset 0 .5em 1.5em #0000001a, inset 0 .125em .5em #00000026;
+}
+.logo-with-text{
+    cursor: url('/pictures/paw.png') 16 16, auto; /*Лапка*/
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+} 
+
+/*Menu*/
+.btn{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.dropdown-menu{
+    /* background-color: rgba(255, 255, 255, 0.800); */
+    background-color: #d2d6d6da;
+} 
+/*--------FOOTER--------*/
+.footer ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    border: solid rgba(0, 0, 0, 0.200);
+    border-width: 5px;
+    box-shadow: inset 0 .5em 1.5em #0000001a, inset 0 .125em .5em #00000026;  
+}
+.footer a {
+    font-size: 30px;
+    text-decoration: none;
+}
+/*--------MAIN--------*/
+body {
+    display: flex; /* чтобы футер всегда был прижат к низу экрана */
+    flex-direction: column;
+    min-height: 100vh; /* не меньше высоты экрана */
+}
+.main{
+    background-color:rgba(0, 0, 0, 0.1);
+    flex:1;
+}
+
+/*--------PAGES--------*/
+/*--------1-INDEX--------*/
+/* my-title, my-text */
 .video-inst{
-    max-height: 80vh;;
+    width:100%;
+    max-height: 80vh;
+    object-fit: cover;
+    display: block;   
+}
+/*--------2-CATALOG--------*/
+.container1{
+    width:100%; 
+    height: 60vh;
+}
+.container1 img{ 
+    width: 100%; 
+    max-height: 80vh; 
+    object-fit: contain;
+    background-color:  rgba(0, 0, 0, 0.075);
+}
+.text-overlay{ 
+    padding: 5%;
+    background-color: rgba(255, 255, 255, 0.5); 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
 }
 
-/*Page 2*/
-.text-with-pictures {
-    background-color:  rgba(255, 255, 255, 0.500);
-}
-.carousel-inner{
-    box-shadow:  4px 6px 12px rgba(0,0,0,0.15);
-}
-
-/*Catalog*/
-.product-cards{
-    background-color:   rgba(255, 255, 255, 0.500);
-}
 .product-card{
     background-color:  rgba(255, 255, 255, 0.800);
+    width: 100%;
+    height: 100%;
     color: rgba(0, 0, 0, 0.700);
+}
 
-}
-.color-btn{
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
 /*-------------------------------------------  */
 /*extra small <576px*/
 @media (max-width: 576px) {
-    .extra-small{background-color:yellow;}
-
-    .main-text {
+    /* .extra-small{background-color:yellow;} */
+    .main-text, .my-text {
         font-size: 16px;
     }
     .main-logo {
@@ -74,34 +115,24 @@
     .my-title{
         font-size: 24px;
     }
-    .my-text {
-        font-size: 16px; 
-    }
-
 }
 /*small ≥576px*/
 @media (min-width: 576px) and (max-width: 768px) {
-    .small{background-color:yellow;}
-
-    .main-text {
+    /* .small{background-color:yellow;} */
+    .main-text, .my-text {
         font-size: 16px;
     }
     .main-logo {
         width: 100px;
     }
-
     .my-title{
         font-size: 24px;
-    }
-    .my-text {
-        font-size: 16px; 
     }
 }
 /*medium ≥768px*/
 @media (min-width: 768px) and (max-width: 992px)  {
-    .medium{background-color:yellow;}
-
-    .main-text {
+    /* .medium{background-color:yellow;} */
+    .main-text, .my-text {
         font-size: 16px;
     }
     .main-logo {
@@ -110,15 +141,11 @@
     .my-title{
         font-size: 24px;
     }
-    .my-text {
-        font-size: 16px; 
-    }
 }
 /*large ≥992px*/
 @media (min-width: 992px) and (max-width: 1200px){
-    .large{background-color:yellow;}
-    
-    .main-text {
+    /* .large{background-color:yellow;} */   
+    .main-text, .my-text {
         font-size: 18px;
     }
     .main-logo {
@@ -127,30 +154,17 @@
     .my-title{
         font-size: 26px;
     }
-    .my-text {
-       font-size: 18px; 
-    }
 }
 /*x-large ≥1200px*/
 @media (min-width: 1200px) {
-    .x-large{background-color:yellow;}
-    
-    .main-text {
+    /* .x-large{background-color:yellow;} */   
+    .main-text, .my-text  {
         font-size: 20px;
     }
     .main-logo {
         width: 125px;
     }
-
     .my-title{
         font-size: 28px;
     }
-    .my-text {
-       font-size: 20px; 
-    }
 }
-
-
-
-
-
